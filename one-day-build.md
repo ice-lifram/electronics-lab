@@ -1,608 +1,585 @@
-# One-Day Builds
-*A collection of small Arduino experiments designed to be completed in a single afternoon.*
+# One-Day Projects
+*A collection of bite-sized Arduino gadgets designed to be completed within a day.*
 
 ---
 
-# Overview
+# Philosophy
 
-Unlike long-term projects, these are intentionally designed to be:
+These projects are not meant to become commercial products.
 
-- Completed within **1–8 hours**
-- Focused on learning **one concept**
-- Built using only a few components
-- Fun enough to demo to friends
-- Expandable if desired
+Instead, they are miniature gadgets that teach one or two embedded systems concepts while remaining fun enough to complete in a single sitting.
 
-The objective is simple:
+The objective isn't originality.
 
-> Build. Learn. Finish. Repeat.
+The objective is to become comfortable designing, building, debugging, and polishing small electronic devices.
+
+> **Build something you'd proudly leave on your desk.**
 
 ---
 
-# Project Guidelines
+# Design Principles
 
-A One-Day Build should:
+Every project should:
 
-- Teach one programming or electronics concept.
-- Use only 2–4 components.
-- Be fully functional by the end of the day.
-- Not require future work to feel "complete."
+- 🕒 Take between **1–8 hours**
+- 🔧 Use only a handful of components
+- 🎯 Focus on one primary concept
+- ✨ Feel like a finished gadget
+- 📖 Be documented with a README
 
----
-
-# Project Ideas
-
----
-
-## 1. RGB Mood Lamp 🌈
-
-### Components
-
-- RGB LED
-- Potentiometer
-
-### Description
-
-Rotate the potentiometer to smoothly cycle through different RGB colors.
-
-### Concepts
-
-- PWM
-- Analog Input
-- Color Mixing
-
-**Difficulty:** ⭐☆☆☆☆
+Bonus points if someone can immediately understand what it does after seeing it for five seconds.
 
 ---
 
-## 2. Electronic Dice 🎲
-
-### Components
-
-- Button
-- LEDs or 7-Segment Display
-
-### Description
-
-Press a button to generate a random number from 1–6.
-
-Add a short rolling animation before revealing the result.
-
-### Concepts
-
-- Random numbers
-- Timers
-- User input
-
-**Difficulty:** ⭐☆☆☆☆
-
----
-
-## 3. Clap Counter 👏
-
-### Components
-
-- Sound Sensor
-- 7-Segment Display
-
-### Description
-
-Each clap increases the counter.
-
-Double clap resets it.
-
-### Concepts
-
-- Interrupt-like behavior
-- Threshold detection
-
-**Difficulty:** ⭐⭐☆☆☆
-
----
-
-## 4. Secret Knock Lock
-
-### Components
-
-- Sound Sensor
-- RGB LED
-- Passive Buzzer
-
-### Description
-
-Unlock only when the correct knock rhythm is detected.
-
-Example:
+# Suggested Workflow
 
 ```
-Knock
-Knock Knock
-Knock
+Idea
+
+↓
+
+Prototype
+
+↓
+
+Working Circuit
+
+↓
+
+Polish
+
+↓
+
+README
+
+↓
+
+Done.
 ```
 
-### Concepts
+Don't worry about making every project unique.
 
-- Pattern recognition
-- Timing
-- State machines
-
-**Difficulty:** ⭐⭐⭐☆☆
+Instead, focus on making every project complete.
 
 ---
 
-## 5. Light Alarm ☀️
+# Project Categories
 
-### Components
+## 🌟 Everyday Desk Gadgets
 
-- Photoresistor
-- RGB LED
-- Buzzer
-
-### Description
-
-If a flashlight shines on the sensor:
-
-- LED turns red
-- Alarm sounds
-
-### Concepts
-
-- Analog thresholds
-- Sensor calibration
-
-**Difficulty:** ⭐☆☆☆☆
+Small utilities you could actually keep on your desk.
 
 ---
 
-## 6. Digital Spirit Level
+### ⏳ Focus Timer
 
-### Components
+A distraction-free Pomodoro timer.
 
-- Tilt Switch
-- LEDs
-
-### Description
-
-Show whether the board is tilted left, centered, or right.
-
-### Concepts
-
-- Digital input
-- State indication
-
-**Difficulty:** ⭐☆☆☆☆
-
----
-
-## 7. Safe Cracker
-
-### Components
-
-- Potentiometer
-- RGB LED
-
-### Description
-
-Rotate the potentiometer to specific values in the correct order to unlock.
-
-Example:
-
-```
-120
-300
-45
-```
-
-### Concepts
-
-- Analog input
-- Sequences
-- State machines
-
-**Difficulty:** ⭐⭐⭐☆☆
-
----
-
-## 8. Button Memory Game
-
-### Components
+**Components**
 
 - Buttons
-- LEDs
-- Buzzer (optional)
+- Passive Buzzer
+- LEDs *(OLED optional)*
 
-### Description
+**Concepts**
 
-Arduino flashes a sequence.
+- State machines
+- Timers (`millis()`)
+- User input
 
-Player repeats it.
+⭐ Challenge
 
-### Concepts
-
-- Arrays
-- Game logic
-- Memory patterns
-
-**Difficulty:** ⭐⭐⭐☆☆
+- Pause & resume
+- Adjustable durations
 
 ---
 
-## 9. Guess the Light
+### 💡 Smart Reading Lamp
 
-### Components
+Automatically adjusts brightness based on room lighting.
+
+**Components**
 
 - Photoresistor
+- LED
+- Potentiometer
 
-### Description
+**Concepts**
 
-Estimate environmental lighting.
-
-Possible outputs:
-
-- Night
-- Cloudy
-- Office
-- Sunny
-
-### Concepts
-
-- Analog ranges
-- Sensor calibration
-
-**Difficulty:** ⭐☆☆☆☆
+- Analog input
+- PWM
+- Calibration
 
 ---
 
-## 10. Plant Health Meter 🌱
+### 🌤 Room Mood Indicator
 
-### Components
+Displays room conditions using RGB colors.
+
+Examples:
+
+- Cold + Dark
+- Bright + Warm
+- Comfortable
+
+**Components**
+
+- Thermistor
+- Photoresistor
+- RGB LED
+
+**Concepts**
+
+- Sensor fusion
+- Thresholds
+- Decision making
+
+---
+
+### 🤫 Quiet Meter
+
+Measures ambient noise.
+
+Green when quiet.
+
+Red when noisy.
+
+**Components**
+
+- Sound Sensor
+- RGB LED
+
+*(OLED optional)*
+
+**Concepts**
+
+- Threshold detection
+- Sensor calibration
+
+---
+
+### 🚦 RGB Status Beacon
+
+Cycle through different desk statuses.
+
+Examples:
+
+- Studying
+- Busy
+- Available
+- Break
+
+**Components**
+
+- RGB LED
+- Button
+
+**Concepts**
+
+- Finite states
+- PWM
+
+---
+
+# 🌱 Home Utilities
+
+---
+
+### 🌱 Plant Guardian
+
+Monitor soil moisture and alert when watering is needed.
+
+**Components**
 
 - Soil Moisture Sensor
 - RGB LED
-- 7-Segment Display
+- Passive Buzzer
 
-### Description
-
-Display plant health from 0–9.
-
-Green = Healthy
-
-Red = Needs Water
-
-### Concepts
+**Concepts**
 
 - Analog sensing
 - Thresholds
-
-**Difficulty:** ⭐⭐☆☆☆
+- Alerts
 
 ---
 
-## 11. Water Leak Alarm
-
-### Components
-
-- Water Level Sensor
-- RGB LED
-- Buzzer
-
-### Description
+### 💧 Water Leak Sentinel
 
 Detect accidental water leaks.
 
-Activate alarm immediately.
+Escalating warning system.
 
-### Concepts
+```
+Water
 
-- Detection systems
-- Alerts
+↓
 
-**Difficulty:** ⭐☆☆☆☆
+Warning
 
----
+↓
 
-## 12. Tiny Piano 🎹
+Critical
 
-### Components
+↓
 
-- Buttons
-- Passive Buzzer
+Continuous Alarm
+```
 
-### Description
+**Components**
 
-Each button plays a musical note.
-
-Optional:
-
-Play "Happy Birthday."
-
-### Concepts
-
-- Tone generation
-- Input mapping
-
-**Difficulty:** ⭐⭐☆☆☆
-
----
-
-## 13. RGB Roulette 🎰
-
-### Components
-
-- Button
+- Water Sensor
 - RGB LED
+- Active Buzzer
 
-### Description
+**Concepts**
 
-Press button.
-
-Random RGB color appears.
-
-Player guesses the next color.
-
-### Concepts
-
-- Random generation
-- RGB control
-
-**Difficulty:** ⭐☆☆☆☆
+- Event handling
+- Alarm logic
 
 ---
 
-## 14. Obstacle Reflex Game
+### 🌙 Night Light
 
-### Components
+Automatically turns on in dark environments.
 
-- Obstacle Sensor
-- LEDs
-- Buzzer
-
-### Description
-
-Wave your hand before the timer expires.
-
-Arduino measures your reaction.
-
-### Concepts
-
-- Timers
-- Sensor events
-
-**Difficulty:** ⭐⭐☆☆☆
-
----
-
-## 15. Electronic Magic 8-Ball 🔮
-
-### Components
-
-- Button
-- 7-Segment Display
-
-### Description
-
-Randomly generate answers.
-
-Example:
-
-```
-1
-3
-5
-8
-```
-
-Use a printed legend for interpretations.
-
-### Concepts
-
-- Randomization
-- Simple UI
-
-**Difficulty:** ⭐☆☆☆☆
-
----
-
-## 16. Ambient Night Light
-
-### Components
+**Components**
 
 - Photoresistor
 - LED
 
-### Description
+**Concepts**
 
-LED brightness automatically adjusts depending on ambient lighting.
-
-### Concepts
-
+- Analog mapping
 - PWM
-- Analog sensors
-
-**Difficulty:** ⭐☆☆☆☆
 
 ---
 
-## 17. Countdown Bomb 💣
-
-### Components
-
-- Button
-- 7-Segment Display
-- Buzzer
-
-### Description
-
-Start countdown.
-
-Player must press the hidden button before reaching zero.
-
-### Concepts
-
-- Timers
-- Game logic
-
-**Difficulty:** ⭐⭐☆☆☆
+# 🎮 Fun & Games
 
 ---
 
-## 18. Morse Code Trainer
+### 🎲 Casino Dice
 
-### Components
+A polished electronic dice.
+
+Instead of instantly showing a number,
+
+```
+Roll
+
+↓
+
+Animation
+
+↓
+
+Tick...
+
+↓
+
+Tick...
+
+↓
+
+Result
+```
+
+**Components**
 
 - Button
-- LED
+- LEDs or 7-Segment
 - Passive Buzzer
 
-### Description
+**Concepts**
 
-Practice Morse Code interactively.
-
-Example words:
-
-- SOS
-- HI
-- HELLO
-
-### Concepts
-
+- Random numbers
+- Animation
 - Timing
-- Encoding
-
-**Difficulty:** ⭐⭐☆☆☆
 
 ---
 
-## 19. Tiny "Lie Detector" (For Fun)
+### ⚡ Reaction Challenge
 
-### Components
+Press the button as quickly as possible.
+
+Store your best score.
+
+**Components**
+
+- LED
+- Button
+- Passive Buzzer
+
+**Concepts**
+
+- Timers
+- Response measurement
+
+---
+
+### 🔐 Combination Lock
+
+Unlock using the correct potentiometer sequence.
+
+Example
+
+```
+Left
+
+↓
+
+Right
+
+↓
+
+Left
+```
+
+**Components**
+
+- Potentiometer
+- RGB LED
+- Button
+
+**Concepts**
+
+- State machines
+- Analog input
+
+---
+
+### 👏 Clap Counter
+
+Every clap increases the counter.
+
+Double clap resets.
+
+**Components**
 
 - Sound Sensor
+- 7-Segment
+
+**Concepts**
+
+- Edge detection
+- Counting
+
+---
+
+### 🎹 Pocket Piano
+
+Each button plays a note.
+
+Potentiometer changes octave.
+
+**Components**
+
+- Buttons
+- Passive Buzzer
+- Potentiometer
+
+**Concepts**
+
+- Tone generation
+- Mapping
+
+---
+
+# 🚗 Automation
+
+---
+
+### 🚗 Parking Assistant
+
+Estimate distance using sound and color.
+
+```
+Far
+
+🟢
+
+↓
+
+Near
+
+🟡
+
+↓
+
+STOP
+
+🔴
+```
+
+The buzzer speeds up as the object approaches.
+
+**Components**
+
+- Ultrasonic
 - RGB LED
+- Passive Buzzer
 
-### Description
+**Concepts**
 
-If someone suddenly speaks loudly:
-
-```
-Hmm...
-Suspicious...
-```
-
-LED changes color.
-
-*(Purely for entertainment.)*
-
-### Concepts
-
-- Sound thresholds
-- Visual feedback
-
-**Difficulty:** ⭐☆☆☆☆
+- Distance measurement
+- PWM
+- Feedback systems
 
 ---
 
-## 20. Random Challenge Generator
+### 🚪 Smart Door Chime
 
-### Components
+Welcome visitors automatically.
 
+```
+Person detected
+
+↓
+
+LED fades
+
+↓
+
+Friendly chime
+
+↓
+
+Idle
+```
+
+**Components**
+
+- Obstacle Sensor
+- RGB LED
+- Passive Buzzer
+
+**Concepts**
+
+- Events
+- Animations
+
+---
+
+### 🚧 Mini Barrier Gate
+
+Raise and lower a miniature gate.
+
+**Components**
+
+- Servo
 - Button
-- 7-Segment Display
 
-### Description
+*(Obstacle sensor optional)*
 
-Randomly generate a number corresponding to a challenge.
+**Concepts**
+
+- Servo control
+- Position mapping
+
+---
+
+# 📊 Mini Dashboards
+
+Small information displays inspired by DeskHub.
+
+---
+
+### 🌡 Desk Thermometer
+
+Display room temperature.
+
+*(OLED optional)*
+
+---
+
+### 📏 Digital Tape Measure
+
+Measure distance with an ultrasonic sensor.
+
+*(OLED optional)*
+
+---
+
+### 🌿 Plant Card
+
+Display plant health.
+
+*(OLED optional)*
+
+---
+
+### 📈 Sensor Dashboard
+
+Cycle between multiple sensor readings.
 
 Example:
 
 ```
-1 → Do 10 pushups
-2 → Drink water
-3 → Stretch
+Temperature
+
+↓
+
+Brightness
+
+↓
+
+Distance
+
+↓
+
+Moisture
 ```
 
-### Concepts
+**Concepts**
 
-- Randomization
-- Lookup tables
-
-**Difficulty:** ⭐☆☆☆☆
+- Menus
+- Modular programming
+- Multiple sensors
 
 ---
 
-# Bonus Project
+# 🚀 Free Build
 
-# Arduino Toybox
+After completing several projects,
 
-Instead of creating twenty separate sketches, build a single sketch that contains every mini-project.
+design one yourself.
 
-Example:
+Rules:
 
-```
-Mode 1
-Reaction Game
-
-↓
-
-Mode 2
-Electronic Dice
-
-↓
-
-Mode 3
-Tiny Piano
-
-↓
-
-Mode 4
-RGB Lamp
-
-↓
-
-Mode 5
-Safe Cracker
-
-↓
-
-Mode 6
-Plant Meter
-
-↓
-
-...
-```
-
-A button cycles through available modes.
-
-Each mode demonstrates a different concept.
-
-As new components are acquired, simply add another mode.
-
-This transforms one Arduino into a reusable electronics playground.
+- Solve a small problem.
+- Keep it under one day.
+- Use components you've already learned.
+- Make it fun.
 
 ---
 
-# Future Expansion Ideas
+# Completion Checklist
 
-Additional inexpensive modules that greatly expand possibilities:
+A project is complete when:
 
-- OLED Display (0.96")
-- SG90 Servo Motor
-- HC-SR04 Ultrasonic Sensor
-- DS3231 RTC Module
-- I²C LCD Display
-- MicroSD Card Module
-- Relay Module
-- RFID RC522 Module
-- Keypad (4×4)
-- Rotary Encoder
+- [ ] Circuit assembled
+- [ ] Code works
+- [ ] Wiring documented
+- [ ] README written
+- [ ] Learned something new
+- [ ] Had fun
 
 ---
 
 # Final Goal
 
-The purpose of these projects is not to build impressive products.
+These projects aren't about collecting Arduino sketches.
 
-Instead, they exist to encourage experimentation, reinforce programming concepts, and make electronics enjoyable.
+They're about building intuition.
 
-Every completed project is one more concept learned—and one more excuse to keep tinkering.
+Every completed gadget teaches another embedded systems concept.
+
+Eventually, you'll stop asking:
+
+> "What can this sensor do?"
+
+and start asking:
+
+> "What can I build with the sensors I already know?"
+
+That's when you're no longer following tutorials—you'll be designing your own devices.
